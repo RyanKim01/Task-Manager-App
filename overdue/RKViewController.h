@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RKAddTaskViewController.h"
+#import "RKDetailTaskViewController.h"
 
-@interface RKViewController : UIViewController
+@interface RKViewController : UIViewController <RKAddTaskViewControllerDelegate, UITableViewDataSource, UITableViewDelegate, RKDetailTaskViewControllerDelegate>
+
+@property (strong, nonatomic) NSMutableArray *taskObjects;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+- (IBAction)reorderBarButtonItemPressed:(UIBarButtonItem *)sender;
+- (IBAction)addTaskBarButtonItemPressed:(UIBarButtonItem *)sender;
+
+-(BOOL)isDateGreaterThanDate:(NSDate *)date and:(NSDate *)toDate;
 
 @end

@@ -10,4 +10,11 @@
 
 @interface RKTaskmodel : NSObject
 
+@property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) NSString *description;
+@property (strong, nonatomic) NSDate *date;
+@property (nonatomic) BOOL iscompleted;
+
+- (id)initWithData:(NSDictionary *)data;
+
 @end

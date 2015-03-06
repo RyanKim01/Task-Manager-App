@@ -7,7 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RKTaskmodel.h"
+@protocol RKAddTaskViewControllerDelegate
 
-@interface RKAddTaskViewController : UIViewController
+-(void)didCancel;
+-(void)didAddTask:(RKTaskmodel *)task;
+
+@end
+
+@interface RKAddTaskViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate>
+
+@property (weak, nonatomic) id <RKAddTaskViewControllerDelegate> delegate;
+
+@property (strong, nonatomic) IBOutlet UITextField *textField;
+@property (strong, nonatomic) IBOutlet UITextView *textView;
+@property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
+- (IBAction)addTaskButtonPressed:(UIButton *)sender;
+- (IBAction)cancelButtonPressed:(UIButton *)sender;
 
 @end

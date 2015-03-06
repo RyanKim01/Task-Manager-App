@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		273ED49D1AA9C6EB00871FD5 /* yellow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 273ED49C1AA9C6EB00871FD5 /* yellow.jpg */; };
 		FFAAC90D1AA6F90D009CEED4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAAC90C1AA6F90D009CEED4 /* Foundation.framework */; };
 		FFAAC90F1AA6F90D009CEED4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAAC90E1AA6F90D009CEED4 /* CoreGraphics.framework */; };
 		FFAAC9111AA6F90D009CEED4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAAC9101AA6F90D009CEED4 /* UIKit.framework */; };
@@ -21,6 +22,10 @@
 		FFAAC92E1AA6F90D009CEED4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAAC9101AA6F90D009CEED4 /* UIKit.framework */; };
 		FFAAC9361AA6F90D009CEED4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FFAAC9341AA6F90D009CEED4 /* InfoPlist.strings */; };
 		FFAAC9381AA6F90D009CEED4 /* overdueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAAC9371AA6F90D009CEED4 /* overdueTests.m */; };
+		FFAAC9431AA6FCBE009CEED4 /* RKAddTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAAC9421AA6FCBE009CEED4 /* RKAddTaskViewController.m */; };
+		FFAAC9491AA6FCDB009CEED4 /* RKEditTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAAC9481AA6FCDB009CEED4 /* RKEditTaskViewController.m */; };
+		FFAAC94C1AA6FD1A009CEED4 /* RKDetailTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAAC94B1AA6FD1A009CEED4 /* RKDetailTaskViewController.m */; };
+		FFAAC94F1AA705A4009CEED4 /* RKTaskmodel.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAAC94E1AA705A4009CEED4 /* RKTaskmodel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		273ED49C1AA9C6EB00871FD5 /* yellow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yellow.jpg; sourceTree = "<group>"; };
 		FFAAC9091AA6F90D009CEED4 /* overdue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = overdue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFAAC90C1AA6F90D009CEED4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FFAAC90E1AA6F90D009CEED4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +59,14 @@
 		FFAAC9331AA6F90D009CEED4 /* overdueTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "overdueTests-Info.plist"; sourceTree = "<group>"; };
 		FFAAC9351AA6F90D009CEED4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FFAAC9371AA6F90D009CEED4 /* overdueTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = overdueTests.m; sourceTree = "<group>"; };
+		FFAAC9411AA6FCBE009CEED4 /* RKAddTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKAddTaskViewController.h; sourceTree = "<group>"; };
+		FFAAC9421AA6FCBE009CEED4 /* RKAddTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKAddTaskViewController.m; sourceTree = "<group>"; };
+		FFAAC9471AA6FCDB009CEED4 /* RKEditTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKEditTaskViewController.h; sourceTree = "<group>"; };
+		FFAAC9481AA6FCDB009CEED4 /* RKEditTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKEditTaskViewController.m; sourceTree = "<group>"; };
+		FFAAC94A1AA6FD1A009CEED4 /* RKDetailTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKDetailTaskViewController.h; sourceTree = "<group>"; };
+		FFAAC94B1AA6FD1A009CEED4 /* RKDetailTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKDetailTaskViewController.m; sourceTree = "<group>"; };
+		FFAAC94D1AA705A4009CEED4 /* RKTaskmodel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKTaskmodel.h; sourceTree = "<group>"; };
+		FFAAC94E1AA705A4009CEED4 /* RKTaskmodel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKTaskmodel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +131,15 @@
 				FFAAC91E1AA6F90D009CEED4 /* Main.storyboard */,
 				FFAAC9211AA6F90D009CEED4 /* RKViewController.h */,
 				FFAAC9221AA6F90D009CEED4 /* RKViewController.m */,
+				FFAAC9411AA6FCBE009CEED4 /* RKAddTaskViewController.h */,
+				FFAAC9421AA6FCBE009CEED4 /* RKAddTaskViewController.m */,
+				FFAAC9471AA6FCDB009CEED4 /* RKEditTaskViewController.h */,
+				FFAAC9481AA6FCDB009CEED4 /* RKEditTaskViewController.m */,
+				FFAAC94A1AA6FD1A009CEED4 /* RKDetailTaskViewController.h */,
+				FFAAC94B1AA6FD1A009CEED4 /* RKDetailTaskViewController.m */,
 				FFAAC9241AA6F90D009CEED4 /* Images.xcassets */,
+				FFAAC94D1AA705A4009CEED4 /* RKTaskmodel.h */,
+				FFAAC94E1AA705A4009CEED4 /* RKTaskmodel.m */,
 				FFAAC9131AA6F90D009CEED4 /* Supporting Files */,
 			);
 			path = overdue;
@@ -126,6 +148,7 @@
 		FFAAC9131AA6F90D009CEED4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				273ED49C1AA9C6EB00871FD5 /* yellow.jpg */,
 				FFAAC9141AA6F90D009CEED4 /* overdue-Info.plist */,
 				FFAAC9151AA6F90D009CEED4 /* InfoPlist.strings */,
 				FFAAC9181AA6F90D009CEED4 /* main.m */,
@@ -230,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFAAC9251AA6F90D009CEED4 /* Images.xcassets in Resources */,
+				273ED49D1AA9C6EB00871FD5 /* yellow.jpg in Resources */,
 				FFAAC9171AA6F90D009CEED4 /* InfoPlist.strings in Resources */,
 				FFAAC9201AA6F90D009CEED4 /* Main.storyboard in Resources */,
 			);
@@ -250,6 +274,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFAAC9431AA6FCBE009CEED4 /* RKAddTaskViewController.m in Sources */,
+				FFAAC94F1AA705A4009CEED4 /* RKTaskmodel.m in Sources */,
+				FFAAC94C1AA6FD1A009CEED4 /* RKDetailTaskViewController.m in Sources */,
+				FFAAC9491AA6FCDB009CEED4 /* RKEditTaskViewController.m in Sources */,
 				FFAAC9191AA6F90D009CEED4 /* main.m in Sources */,
 				FFAAC91D1AA6F90D009CEED4 /* RKAppDelegate.m in Sources */,
 				FFAAC9231AA6F90D009CEED4 /* RKViewController.m in Sources */,
@@ -457,6 +485,7 @@
 				FFAAC93D1AA6F90D009CEED4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FFAAC93E1AA6F90D009CEED4 /* Build configuration list for PBXNativeTarget "overdueTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +494,7 @@
 				FFAAC9401AA6F90D009CEED4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

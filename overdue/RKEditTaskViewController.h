@@ -7,7 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RKTaskmodel.h"
 
-@interface RKEditTaskViewController : UIViewController
+@protocol RKEditTaskViewControllerDelegate <NSObject>
+
+-(void)didUpdateTask;
+
+@end
+
+
+@interface RKEditTaskViewController : UIViewController <UITextViewDelegate, UITextFieldDelegate>
+@property (weak, nonatomic) id <RKEditTaskViewControllerDelegate> delegate;
+@property (strong, nonatomic) RKTaskmodel *task;
+
+@property (strong, nonatomic) IBOutlet UITextField *textField;
+@property (strong, nonatomic) IBOutlet UITextView *textView;
+@property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
+- (IBAction)saveBarButtonItemPressed:(UIBarButtonItem *)sender;
 
 @end

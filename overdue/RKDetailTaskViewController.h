@@ -7,7 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RKTaskmodel.h"
+#import "RKEditTaskViewController.h"
 
-@interface RKDetailTaskViewController : UIViewController
+@protocol RKDetailTaskViewControllerDelegate <NSObject>
+
+-(void)updateTask;
+
+@end
+
+@interface RKDetailTaskViewController : UIViewController <RKEditTaskViewControllerDelegate>
+
+@property (strong, nonatomic) RKTaskmodel *task;
+@property (weak, nonatomic) id <RKDetailTaskViewControllerDelegate> delegate;
+
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UILabel *dateLabel;
+@property (strong, nonatomic) IBOutlet UILabel *detailLabel;
+- (IBAction)editBarButtonItemPressed:(UIBarButtonItem *)sender;
 
 @end

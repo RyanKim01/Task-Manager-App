@@ -7,6 +7,8 @@
 //
 
 #import "RKDetailTaskViewController.h"
+#import "RKEditTaskViewController.h"
+
 
 @interface RKDetailTaskViewController ()
 
@@ -27,6 +29,15 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.titleLabel.text = self.task.title;
+    self.detailLabel.text = self.task.description;
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *dateString = [formatter stringFromDate:self.task.date];
+    self.dateLabel.text = dateString;
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,6 +45,16 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.destinationViewController isKindOfClass:[RKEditTaskViewController class]]) {
+        RKEditTaskViewController *editTaskViewController = segue.destinationViewController;
+        editTaskViewController.task = self.task;
+        editTaskViewController.delegate = self;
+    }
+}
+
 
 /*
 #pragma mark - Navigation
@@ -45,5 +66,27 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)editBarButtonItemPressed:(UIBarButtonItem *)sender {
+    [self performSegueWithIdentifier:@"toEditTaskViewControllerSegue" sender:nil];
+}
+
+
+-(void)didUpdateTask
+{
+    self.titleLabel.text = self.task.title;
+    self.detailLabel.text = self.task.description;
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *stringFromDate = [formatter stringFromDate:self.task.date];
+    self.dateLabel.text = stringFromDate;
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
+    [self.delegate updateTask];
+}
+
+
+
 
 @end

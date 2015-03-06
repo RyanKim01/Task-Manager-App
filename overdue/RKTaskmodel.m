@@ -10,4 +10,23 @@
 
 @implementation RKTaskmodel
 
+-(id)init
+{
+    self = [self initWithData:nil];
+    return self;
+}
+
+-(id)initWithData:(NSDictionary *)data
+{
+    self = [super init];
+    
+    if (self){
+    self.title = data[TITLE];
+    self.description = data[DESCRIPTION];
+    self.date = data[DATE];
+    self.iscompleted = [data[COMPLETION] boolValue];
+    }
+    
+    return self;
+}
 @end
